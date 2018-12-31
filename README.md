@@ -15,7 +15,7 @@ Tests for candidates 2018
 
 3. Kubernetes  
 3.1. Create kubernetes cluster with 2 or 3 nodes  
-3.2. Deploy application to cluster 
+3.2. Deploy application to cluster      
 3.3. Start 2-3 replicas of each container    
 
 ----------------------------

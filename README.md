@@ -1,4 +1,9 @@
-Tests for candidates 2018
+Tests for candidates 2018     
+
+For this test you can dockerize any application you want, but i must consist of front, back and DB. 
+Also peristent data storage should be configured for DB.    
+Use smallest container where you can.   
+
 1. Dockerize app, make possible to run with docker-compose. 
 1.1. App should consist of such components.  
 1.1.1. nginx   

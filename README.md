@@ -14,8 +14,9 @@ Use smallest container where you can.
      sequence DB,backend, frontend, nginx    
 2. Using ansible on Ubuntu 16.04   
 2.1 Add SWAP   
-2.2 Install nginx, postgresql, redis, docker-compose   
-2.3.1 Copy project to remote server     
+2.2 Install on host nginx, postgresql, redis, docker-compose   
+2.3 Using ansible make a deploy scenario     
+2.3.1 Copy your project to remote server     
 2.3.2 Run docker-compose.yml  
 
 3. Kubernetes  

@@ -1,0 +1,11 @@
+---
+- name: install docker package
+  pip: name=docker
+
+- name: install docker-py package
+  pip: name=docker-compose
+
+- name: run the service defined in my_project's docker-compose.yml
+  docker_service:
+    project_src: /opt/maxvelck/testapp
+

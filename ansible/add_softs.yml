@@ -1,0 +1,45 @@
+---
+- hosts: test-1
+  sudo: yes
+
+  tasks:
+  - name: update apt
+    apt: update_cache=yes
+
+  - name: ensure packages installed
+    apt: pkg={{ item }} state=latest
+    with_items:
+      - make
+      - build-essential
+      - tcl8.5
+
+  - name: apt-get install nginx
+    apt: name=nginx state=latest
+
+  - name: apt-get install postgresql
+    apt: name=postgresql state=latest
+
+  - name: apt-get install docker-compose
+    apt: name=docker-compose state=latest
+
+  - name: download latest stable redis
+    get_url:
+      url: http://download.redis.io/redis-stable.tar.gz
+      dest: /tmp/redis-stable.tar.gz
+      mode: 0777
+
+  - name: extract redis
+    unarchive:
+      src: /tmp/redis-stable.tar.gz
+      dest: /tmp
+      remote_src: yes
+
+  - name: build redis
+    command: make
+    args:
+      chdir: /tmp/redis-stable
+
+  - name: install redis
+    command: make install
+    args:
+      chdir: /tmp/redis-stable

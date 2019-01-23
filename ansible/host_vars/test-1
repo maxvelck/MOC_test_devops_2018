@@ -1,0 +1,6 @@
+ansible_ssh_host: 35.178.194.19
+ansible_ssh_port: 22
+ansible_ssh_user: ubuntu
+ansible_ssh_private_key_file: /home/ubuntu/.ssh/test-devops.pem
+remote_user: ubuntu
+docker_group: docker

@@ -1,0 +1,6 @@
+---
+- name: Clone a private repository into /opt.
+  git:
+    repo: 'https://github.com/maxvelck/MOC_test_devops_2018.git'
+    version: master
+    dest: /opt/maxvelck
